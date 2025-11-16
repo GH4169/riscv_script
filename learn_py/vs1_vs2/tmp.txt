@@ -1,0 +1,36 @@
+.VRXUNARY0 encoding space
+[cols="2,14"]
+|===
+|  vs2  |
+
+| 00000 | vmv.s.x
+|===
+
+.VWXUNARY0 encoding space
+[cols="2,14"]
+|===
+|  vs1  |
+
+| 00000 | vmv.x.s
+| 10000 | vcpop
+| 10001 | vfirst
+|===
+
+assembly	funct6	funtc3
+vslide1up_OPMVX	01110	OPMVX
+vslide1down_OPMVX	01111	OPMVX
+VWXUNARY0_OPMVV	10000	OPMVV
+VRXUNARY0_OPMVX	10000	OPMVX
+vcompress_OPMVV	10111	OPMVV
+vmandn_OPMVV	11000	OPMVV
+
+
+assembly	funct6	funct3	vs1	vs2	vm
+vslide1up_OPMVX	01110	OPMVX			
+vslide1down_OPMVX	01111	OPMVX			
+VWXUNARY0_OPMVV_rs1_vmv.v.s	10000	OPMVV	00000		
+VWXUNARY0_OPMVV_rs1_vcpop	10000	OPMVV	10000		
+VWXUNARY0_OPMVV_rs1_vfirst	10000	OPMVV	10001		
+VRXUNARY0_OPMVX__rs2_vmv.s.x	10000	OPMVX		00000	
+vcompress_OPMVV	10111	OPMVV			
+vmandn_OPMVV	11000	OPMVV			

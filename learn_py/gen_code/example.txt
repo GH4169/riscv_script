@@ -1,0 +1,116 @@
+input excel:
+assembly	funct6	funct3	vs1	vs2	vm
+VRXUNARY0_OPMVX_rs2_vmv.s.x	010000	OPMVX		00000	
+vadd_OPIVV	000000	OPIVV			
+vadd_OPIVX	000000	OPIVX			
+VFUNARY0_OPFVV_rs1_vfcvt.xu.f.v	010010	OPFVV	00000		
+
+input code format:
+```wavedrom
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVV'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 0},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 'funct6'},
+]}
+```
+
+```wavedrom
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPFVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 1},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 'funct6'},
+]}
+```
+
+```wavedrom
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVV'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 2},
+  {bits: 5, name: 'vs1', type: 2},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 'funct6'},
+]}
+```
+
+```wavedrom
+{reg: [
+  {bits: 7, name: 0x57, attr: ['OPIVI']},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 3},
+  {bits: 5, name: 'imm[4:0]', type: 5},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 'funct6'},
+]}
+```
+
+```wavedrom
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPIVX'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 4},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 'funct6'},
+]}
+```
+
+```wavedrom
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPFVF'},
+  {bits: 5, name: 'vd', type: 2},
+  {bits: 3, name: 5},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 'funct6'},
+]}
+```
+
+```wavedrom
+{reg: [
+  {bits: 7, name: 0x57, attr: 'OPMVX'},
+  {bits: 5, name: 'vd / rd', type: 7},
+  {bits: 3, name: 6},
+  {bits: 5, name: 'rs1', type: 4},
+  {bits: 5, name: 'vs2', type: 2},
+  {bits: 1, name: 'vm'},
+  {bits: 6, name: 'funct6'},
+]}
+```
+output excel:
+assembly	funct6	funct3	vs1	vs2	vm	code
+VRXUNARY0_OPMVX_rs2_vmv.s.x	010000	OPMVX		00000		32‘b010000_?_00000_?????_110_?????_1010111
+vadd_OPIVV	000000	OPIVV				32‘b000000_?_?????_?????_000_?????_1010111
+vadd_OPIVX	000000	OPIVX				32‘b000000_?_?????_?????_100_?????_1010111
+VFUNARY0_OPFVV_rs1_vfcvt.xu.f.v	010010	OPFVV	00000			32‘b010010_?_?????_00000_001_?????_1010111
+
+
+
+
+[
+{'reg': [{'bits': 7, 'name': '0x57', 'attr': 'OPIVV'}, {'bits': 5, 'name': 'vd', 'type': 2}, {'bits': 3, 'name': '0'}, {'bits': 5, 'name': 'vs1', 'type': 2}, {'bits': 5, 'name': 'vs2', 'type': 2}, {'bits': 1, 'name': 'vm'}, {'bits': 6, 'name': 'funct6'}]},
+
+{'reg': [{'bits': 7, 'name': '0x57', 'attr': 'OPFVV'}, {'bits': 5, 'name': 'vd _ rd', 'type': 7}, {'bits': 3, 'name': '1'}, {'bits': 5, 'name': 'vs1', 'type': 2}, {'bits': 5, 'name': 'vs2', 'type': 2}, {'bits': 1, 'name': 'vm'}, {'bits': 6, 'name': 'funct6'}]},
+
+{'reg': [{'bits': 7, 'name': '0x57', 'attr': 'OPMVV'}, {'bits': 5, 'name': 'vd _ rd', 'type': 7}, {'bits': 3, 'name': '2'}, {'bits': 5, 'name': 'vs1', 'type': 2}, {'bits': 5, 'name': 'vs2', 'type': 2}, {'bits': 1, 'name': 'vm'}, {'bits': 6, 'name': 'funct6'}]},
+
+{'reg': [{'bits': 7, 'name': '0x57', 'attr': ['OPIVI']}, {'bits': 5, 'name': 'vd', 'type': 2}, {'bits': 3, 'name': '3'}, {'bits': 5, 'name': 'imm_4:0_', 'type': 5}, {'bits': 5, 'name': 'vs2', 'type': 2}, {'bits': 1, 'name': 'vm'}, {'bits': 6, 'name': 'funct6'}]},
+
+{'reg': [{'bits': 7, 'name': '0x57', 'attr': 'OPIVX'}, {'bits': 5, 'name': 'vd', 'type': 2}, {'bits': 3, 'name': '4'}, {'bits': 5, 'name': 'rs1', 'type': 4}, {'bits': 5, 'name': 'vs2', 'type': 2}, {'bits': 1, 'name': 'vm'}, {'bits': 6, 'name': 'funct6'}]},
+
+{'reg': [{'bits': 7, 'name': '0x57', 'attr': 'OPFVF'}, {'bits': 5, 'name': 'vd', 'type': 2}, {'bits': 3, 'name': '5'}, {'bits': 5, 'name': 'rs1', 'type': 4}, {'bits': 5, 'name': 'vs2', 'type': 2}, {'bits': 1, 'name': 'vm'}, {'bits': 6, 'name': 'funct6'}]},
+
+{'reg': [{'bits': 7, 'name': '0x57', 'attr': 'OPMVX'}, {'bits': 5, 'name': 'vd _ rd', 'type': 7}, {'bits': 3, 'name': '6'}, {'bits': 5, 'name': 'rs1', 'type': 4}, {'bits': 5, 'name': 'vs2', 'type': 2}, {'bits': 1, 'name': 'vm'}, {'bits': 6, 'name': 'funct6'}]}
+]

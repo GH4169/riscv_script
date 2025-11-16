@@ -1,0 +1,17 @@
+.VRXUNARY0 encoding space
+[cols="2,14"]
+|===
+|  vs2  |
+
+| 00000 | vmv.s.x
+|===
+
+.VWXUNARY0 encoding space
+[cols="2,14"]
+|===
+|  vs1  |
+
+| 00000 | vmv.x.s
+| 10000 | vcpop
+| 10001 | vfirst
+|===
