@@ -1,4 +1,0 @@
-input:
-
-VRXUNARY0_OPMVX_rs2_vmv.s.x	010000	OPMVX		00000
-vadd_OPIVV	000000	OPIVV		
