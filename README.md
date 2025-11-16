@@ -2,7 +2,7 @@
 
 RISC-V 相关脚本仓库，目前只有gen_v_inst.py用于生成RISC-V vector指令编码、功能覆盖率，后续会扩展更多 RISC-V 脚本。
 
-## 📂 仓库结构
+## 仓库结构
 ```
 rsicv_script/
 ├── gen_v_inst_code/
@@ -10,7 +10,7 @@ rsicv_script/
 └── README.md
 ```
 
-## 🛠 gen_v_inst.py
+## gen_v_inst.py
 生成向量指令编码和功能覆盖率的脚本，输入来自以下文件（只处理运算指令）：  
 
 - [inst-table.adoc](https://github.com/riscvarchive/riscv-v-spec/blob/master/inst-table.adoc)  
