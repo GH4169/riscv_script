@@ -154,7 +154,7 @@ def process_excel(template_file, input_excel, output_excel, output_fcov):# {{{
     codes = []
     with open(output_fcov, "w") as f_fcov:
         for i, row in df.iterrows():
-            funct3 = row.get("funct3")
+            funct3 = row.get("funct3").strip()
             # print(funct3)
             tmpl = select_template(templates, funct3)
             if tmpl:
