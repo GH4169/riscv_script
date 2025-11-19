@@ -92,6 +92,6 @@ if __name__ == "__main__":
     if conflicts:
         print("========= Found Conflicts =========")
         for (c1, l1), (c2, l2) in conflicts:
-            print(f"[Line {l1}] {c1}\n   <==>  [Line {l2}] {c2}\n")
+            print(f"[Line {l1}] {c1}  <==>  [Line {l2}] {c2}\n")
     else:
         print("No conflicts found.")
